@@ -1,0 +1,3 @@
+# By running SharpSMP you agree to Mojang's EULA:
+# https://aka.ms/MinecraftEULA
+eula=true

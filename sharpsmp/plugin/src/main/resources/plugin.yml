@@ -1,0 +1,116 @@
+name: SharpSMP
+version: 1.0.0
+main: dev.sharpsmp.SharpPlugin
+api-version: '26.3'
+author: SharpSMP
+description: The Edge — currency, bounties, auctions, crates, and a custom spawn.
+website: https://localhost
+
+commands:
+  sharpsmp:
+    description: SharpSMP help and staff tools
+    aliases: [sharp]
+    usage: /sharpsmp help
+  spawn:
+    description: Return to The Edge
+    usage: /spawn
+  balance:
+    description: Check a Sharps balance
+    aliases: [bal, money]
+    usage: /balance [player]
+  pay:
+    description: Pay Sharps to a player
+    usage: /pay <player> <amount>
+  bounty:
+    description: Place and browse bounties
+    aliases: [bounties]
+    usage: /bounty [set <player> <amount>]
+  menu:
+    description: Open the Sharp menu
+    aliases: [hub]
+    usage: /menu
+  settings:
+    description: Open personal settings
+    usage: /settings
+  shop:
+    description: Open the server shop
+    usage: /shop
+  sell:
+    description: Sell items for Sharps
+    usage: /sell [hand|all]
+  auction:
+    description: Open the auction house
+    aliases: [ah]
+    usage: /auction [sell <price>]
+  rtp:
+    description: Random teleport into the wild
+    usage: /rtp
+  home:
+    description: Teleport to a home
+    usage: /home [name]
+  sethome:
+    description: Save a home
+    usage: /sethome [name]
+  delhome:
+    description: Delete a home
+    usage: /delhome <name>
+  homes:
+    description: List your homes
+    usage: /homes
+  tpa:
+    description: Ask to teleport to a player
+    usage: /tpa <player>
+  tpahere:
+    description: Ask a player to teleport to you
+    usage: /tpahere <player>
+  tpaccept:
+    description: Accept a teleport request
+    aliases: [tpyes]
+    usage: /tpaccept
+  tpdeny:
+    description: Deny a teleport request
+    aliases: [tpno]
+    usage: /tpdeny
+  team:
+    description: Create and manage a team
+    aliases: [clan]
+    usage: /team <create|invite|join|leave|kick|disband|color|transfer>
+  teamchat:
+    description: Send a message to your team
+    aliases: [tc]
+    usage: /tc <message>
+  kit:
+    description: Claim a kit
+    aliases: [kits]
+    usage: /kit [name]
+  warp:
+    description: Warp around the server
+    aliases: [warps]
+    usage: /warp [name]
+  crates:
+    description: Open the crate menu
+    aliases: [crate]
+    usage: /crates
+  leaderboard:
+    description: Open leaderboards
+    aliases: [lb, leaderboards]
+    usage: /leaderboard
+  stats:
+    description: View player stats
+    usage: /stats [player]
+  daily:
+    description: Claim the daily reward
+    usage: /daily
+  msg:
+    description: Private message
+    aliases: [message, tell, w, whisper]
+    usage: /msg <player> <message>
+  reply:
+    description: Reply to the last private message
+    aliases: [r]
+    usage: /reply <message>
+
+permissions:
+  sharpsmp.admin:
+    description: Build at spawn, edit warps, and manage Sharps
+    default: op

@@ -1,0 +1,615 @@
+# SharpSMP — edit this file, then run /sharpsmp reload
+# Money amounts accept 500, 1.5k, 2m, and 1b in commands.
+
+currency:
+  name: Sharps
+  symbol: "$"
+  starting-balance: 1500
+
+spawn:
+  world: world
+  center-x: 0
+  center-y: 220
+  center-z: 0
+  radius: 28
+  built: false
+  on-join: true
+  delay-seconds: 5
+
+rtp:
+  world: world
+  min-distance: 800
+  max-distance: 20000
+  cooldown-seconds: 45
+  delay-seconds: 3
+
+bounty:
+  min: 100
+  max: 1000000000
+  tax-percent: 5
+  broadcast-minimum: 5000
+
+combat:
+  tag-seconds: 20
+
+homes:
+  max: 3
+  delay-seconds: 3
+
+tpa:
+  timeout-seconds: 60
+  delay-seconds: 3
+
+warps:
+  delay-seconds: 3
+
+teams:
+  max-members: 8
+
+kills:
+  reward: 50
+  streak-bonus: 25
+
+auction:
+  tax-percent: 5
+  max-listings: 10
+  expire-hours: 48
+
+daily:
+  amount: 500
+  key: common
+  cooldown-hours: 24
+
+scoreboard:
+  title: "<gradient:#ff3355:#ffffff><bold>SharpSMP</bold></gradient>"
+  header: "<gradient:#ff3355:#ffffff><bold>SharpSMP</bold></gradient>\n<gray>The Edge"
+
+crates:
+  playtime-minutes-per-key: 30
+  types:
+    common:
+      name: "<gray>Common Crate"
+      icon: CHEST
+      rewards:
+        iron:
+          type: item
+          material: IRON_INGOT
+          amount: 16
+          weight: 30
+          display: "<white>Iron Bundle"
+        steak:
+          type: item
+          material: COOKED_BEEF
+          amount: 16
+          weight: 24
+          display: "<white>Steak"
+        cash:
+          type: money
+          amount: 250
+          weight: 20
+          display: "<white>250 Sharps"
+        pearls:
+          type: item
+          material: ENDER_PEARL
+          amount: 4
+          weight: 12
+          display: "<aqua>Pearls"
+        gapple:
+          type: item
+          material: GOLDEN_APPLE
+          amount: 2
+          weight: 8
+          display: "<gold>Golden Apples"
+        rare-key:
+          type: key
+          key: rare
+          amount: 1
+          weight: 4
+          display: "<blue>Rare Key"
+    rare:
+      name: "<blue>Rare Crate"
+      icon: ENDER_CHEST
+      rewards:
+        diamonds:
+          type: item
+          material: DIAMOND
+          amount: 8
+          weight: 24
+          display: "<aqua>Diamonds"
+        obsidian:
+          type: item
+          material: OBSIDIAN
+          amount: 16
+          weight: 20
+          display: "<dark_purple>Obsidian"
+        cash:
+          type: money
+          amount: 1500
+          weight: 18
+          display: "<white>1,500 Sharps"
+        totem:
+          type: item
+          material: TOTEM_OF_UNDYING
+          amount: 1
+          weight: 8
+          display: "<gold>Totem"
+        crystal:
+          type: item
+          material: END_CRYSTAL
+          amount: 4
+          weight: 10
+          display: "<light_purple>Crystals"
+        legend-key:
+          type: key
+          key: legendary
+          amount: 1
+          weight: 3
+          display: "<light_purple>Legendary Key"
+    legendary:
+      name: "<light_purple>Legendary Crate"
+      icon: NETHER_STAR
+      rewards:
+        netherite:
+          type: item
+          material: NETHERITE_INGOT
+          amount: 1
+          weight: 10
+          display: "<dark_gray>Netherite Ingot"
+        cash:
+          type: money
+          amount: 8000
+          weight: 16
+          display: "<white>8,000 Sharps"
+        elytra:
+          type: item
+          material: ELYTRA
+          amount: 1
+          weight: 2
+          display: "<aqua>Elytra"
+        totems:
+          type: item
+          material: TOTEM_OF_UNDYING
+          amount: 2
+          weight: 8
+          display: "<gold>Totems"
+        egapple:
+          type: item
+          material: ENCHANTED_GOLDEN_APPLE
+          amount: 1
+          weight: 6
+          display: "<light_purple>Enchanted Apple"
+
+kits:
+  starter:
+    display: "<white>Starter"
+    icon: STONE_SWORD
+    once: true
+    cooldown-seconds: 0
+    items:
+      sword:
+        material: STONE_SWORD
+        amount: 1
+      pickaxe:
+        material: STONE_PICKAXE
+        amount: 1
+      axe:
+        material: STONE_AXE
+        amount: 1
+      chest:
+        material: LEATHER_CHESTPLATE
+        amount: 1
+      food:
+        material: COOKED_BEEF
+        amount: 16
+      torches:
+        material: TORCH
+        amount: 16
+  member:
+    display: "<green>Member"
+    icon: IRON_SWORD
+    once: false
+    cooldown-seconds: 86400
+    items:
+      sword:
+        material: IRON_SWORD
+        amount: 1
+        enchants:
+          sharpness: 1
+      shield:
+        material: SHIELD
+        amount: 1
+      food:
+        material: COOKED_BEEF
+        amount: 16
+      pearls:
+        material: ENDER_PEARL
+        amount: 4
+      apple:
+        material: GOLDEN_APPLE
+        amount: 1
+  edge:
+    display: "<#ff3355>Edge"
+    icon: DIAMOND_SWORD
+    once: false
+    cooldown-seconds: 43200
+    items:
+      sword:
+        material: DIAMOND_SWORD
+        amount: 1
+        enchants:
+          sharpness: 2
+          unbreaking: 2
+      helmet:
+        material: DIAMOND_HELMET
+        amount: 1
+        enchants:
+          protection: 2
+      chestplate:
+        material: DIAMOND_CHESTPLATE
+        amount: 1
+        enchants:
+          protection: 2
+      leggings:
+        material: DIAMOND_LEGGINGS
+        amount: 1
+        enchants:
+          protection: 2
+      boots:
+        material: DIAMOND_BOOTS
+        amount: 1
+        enchants:
+          protection: 2
+          feather_falling: 2
+      shield:
+        material: SHIELD
+        amount: 1
+      apples:
+        material: GOLDEN_APPLE
+        amount: 3
+      pearls:
+        material: ENDER_PEARL
+        amount: 8
+      obsidian:
+        material: OBSIDIAN
+        amount: 8
+      crystals:
+        material: END_CRYSTAL
+        amount: 4
+      anchor:
+        material: RESPAWN_ANCHOR
+        amount: 1
+      glowstone:
+        material: GLOWSTONE
+        amount: 8
+
+shop:
+  combat:
+    name: "<#ff3355>Combat"
+    icon: NETHERITE_SWORD
+    items:
+      obsidian:
+        material: OBSIDIAN
+        amount: 8
+        price: 400
+      crystal:
+        material: END_CRYSTAL
+        amount: 1
+        price: 350
+      anchor:
+        material: RESPAWN_ANCHOR
+        amount: 1
+        price: 900
+      glowstone:
+        material: GLOWSTONE
+        amount: 16
+        price: 200
+      totem:
+        material: TOTEM_OF_UNDYING
+        amount: 1
+        price: 5000
+      gapple:
+        material: GOLDEN_APPLE
+        amount: 1
+        price: 650
+      egapple:
+        material: ENCHANTED_GOLDEN_APPLE
+        amount: 1
+        price: 25000
+      pearls:
+        material: ENDER_PEARL
+        amount: 4
+        price: 500
+      cobweb:
+        material: COBWEB
+        amount: 4
+        price: 200
+      xp:
+        material: EXPERIENCE_BOTTLE
+        amount: 8
+        price: 400
+      arrows:
+        material: ARROW
+        amount: 32
+        price: 80
+      bow:
+        material: BOW
+        amount: 1
+        price: 250
+      crossbow:
+        material: CROSSBOW
+        amount: 1
+        price: 400
+      shield:
+        material: SHIELD
+        amount: 1
+        price: 350
+      rockets:
+        material: FIREWORK_ROCKET
+        amount: 16
+        price: 300
+      netherite:
+        material: NETHERITE_INGOT
+        amount: 1
+        price: 12000
+  food:
+    name: "<gold>Food"
+    icon: COOKED_BEEF
+    items:
+      steak:
+        material: COOKED_BEEF
+        amount: 16
+        price: 80
+      carrots:
+        material: GOLDEN_CARROT
+        amount: 8
+        price: 120
+      pork:
+        material: COOKED_PORKCHOP
+        amount: 16
+        price: 80
+      bread:
+        material: BREAD
+        amount: 16
+        price: 40
+  blocks:
+    name: "<gray>Blocks"
+    icon: DEEPSLATE_BRICKS
+    items:
+      end-stone:
+        material: END_STONE
+        amount: 32
+        price: 160
+      crying:
+        material: CRYING_OBSIDIAN
+        amount: 4
+        price: 400
+      logs:
+        material: OAK_LOG
+        amount: 32
+        price: 64
+      glass:
+        material: GLASS
+        amount: 32
+        price: 80
+      deepslate:
+        material: COBBLED_DEEPSLATE
+        amount: 32
+        price: 48
+      concrete:
+        material: WHITE_CONCRETE
+        amount: 16
+        price: 64
+  utility:
+    name: "<aqua>Utility"
+    icon: ENDER_CHEST
+    items:
+      echest:
+        material: ENDER_CHEST
+        amount: 1
+        price: 2500
+      shulker:
+        material: SHULKER_BOX
+        amount: 1
+        price: 6000
+      table:
+        material: ENCHANTING_TABLE
+        amount: 1
+        price: 1500
+      anvil:
+        material: ANVIL
+        amount: 1
+        price: 800
+      tag:
+        material: NAME_TAG
+        amount: 1
+        price: 400
+      flint:
+        material: FLINT_AND_STEEL
+        amount: 1
+        price: 150
+      water:
+        material: WATER_BUCKET
+        amount: 1
+        price: 100
+      elytra:
+        material: ELYTRA
+        amount: 1
+        price: 75000
+  keys:
+    name: "<light_purple>Keys"
+    icon: TRIPWIRE_HOOK
+    items:
+      common:
+        type: key
+        key: common
+        amount: 1
+        price: 1000
+        icon: TRIPWIRE_HOOK
+        display: "<white>Common Key"
+      rare:
+        type: key
+        key: rare
+        amount: 1
+        price: 4000
+        icon: TRIPWIRE_HOOK
+        display: "<blue>Rare Key"
+      legendary:
+        type: key
+        key: legendary
+        amount: 1
+        price: 15000
+        icon: TRIPWIRE_HOOK
+        display: "<light_purple>Legendary Key"
+
+worth:
+  ROTTEN_FLESH: 2
+  BONE: 2
+  STRING: 3
+  GUNPOWDER: 8
+  SPIDER_EYE: 4
+  ENDER_PEARL: 40
+  BLAZE_ROD: 30
+  MAGMA_CREAM: 15
+  GHAST_TEAR: 80
+  DIAMOND: 120
+  EMERALD: 40
+  ANCIENT_DEBRIS: 800
+  NETHERITE_SCRAP: 900
+  NETHERITE_INGOT: 4000
+  GOLD_INGOT: 25
+  IRON_INGOT: 10
+  COPPER_INGOT: 2
+  COAL: 3
+  LAPIS_LAZULI: 6
+  REDSTONE: 4
+  QUARTZ: 6
+  OBSIDIAN: 15
+  CRYING_OBSIDIAN: 40
+  GOLDEN_APPLE: 200
+  ENCHANTED_GOLDEN_APPLE: 8000
+  TOTEM_OF_UNDYING: 1500
+  EXPERIENCE_BOTTLE: 25
+  ARROW: 1
+  OAK_LOG: 2
+  WHEAT: 2
+  CARROT: 2
+  POTATO: 2
+  BEETROOT: 2
+  MELON_SLICE: 1
+  PUMPKIN: 4
+  SUGAR_CANE: 2
+  CACTUS: 2
+  INK_SAC: 4
+  GLOW_INK_SAC: 12
+  PRISMARINE_SHARD: 8
+  PRISMARINE_CRYSTALS: 12
+  NAUTILUS_SHELL: 200
+  HEART_OF_THE_SEA: 2500
+  NETHER_STAR: 20000
+
+messages:
+  prefix: "<gradient:#ff3355:#ffb3c2><bold>SharpSMP</bold></gradient> <dark_gray>»</dark_gray> <gray>"
+  welcome-1: "<gray>◆ <white><player></white> <gray>welcome to <white>SharpSMP</white>."
+  welcome-2: "<gray>The Edge is safe. The wild is not. <white>/rtp</white> <gray>jumps off."
+  welcome-3: "<gray>Right-click the nether star or type <white>/menu</white><gray>."
+  joined: "<gray>◆ <white><player></white> <gray>slid onto <white>The Edge</white>."
+  quit: "<gray>◆ <white><player></white> <gray>left The Edge."
+  spawn-rising: "The Edge is still rising. Hang on."
+  welcome-back: "Welcome back."
+  rescued: "The Edge pulls you back."
+  balance: "You have <white><amount></white>."
+  balance-other: "<white><player></white> has <white><amount></white>."
+  paid: "You paid <white><player></white> <white><amount></white>."
+  paid-received: "<white><player></white> paid you <white><amount></white>."
+  pay-self: "You can't do that to yourself."
+  broke: "<#ff6b6b>You don't have enough Sharps."
+  invalid-amount: "<#ff6b6b>That amount doesn't work. Try 500, 1.5k, or 2m."
+  not-found: "<#ff6b6b>No player named <white><player></white>."
+  players-only: "<#ff6b6b>Only a player can do that."
+  no-permission: "<#ff6b6b>You need staff powers for that."
+  cancelled: "Cancelled."
+  reloaded: "SharpSMP settings reloaded."
+  saved: "Saved profiles, auctions, teams, and warps."
+  building: "Raising The Edge. Give it a moment."
+  bounty-self: "<#ff6b6b>You can't put a bounty on yourself."
+  bounty-min: "<#ff6b6b>The smallest bounty is <white><amount></white>."
+  bounty-max: "<#ff6b6b>Bounties cap at <white><amount></white>."
+  bounty-set: "You put <white><amount></white> on <white><player></white>. You paid <white><price></white>."
+  bounty-received: "<white><player></white> raised the price on your head to <white><amount></white>."
+  bounty-check: "<white><player></white> is worth <white><amount></white>."
+  bounty-broadcast: "<gray>◆ <white><player></white> <gray>set <white><target></white> at <white><amount></white>."
+  streak: "<gray>◆ <white><player></white> <gray>is on a <white><count></white> kill streak."
+  sell-none: "Nothing in there is worth Sharps."
+  sell-special: "Enchanted, named, and packed shulkers stay with you."
+  sell-done: "Sold <white><count></white> for <white><amount></white>."
+  purchased: "Bought <white><count></white> <white><item></white> for <white><price></white>."
+  daily-wait: "Daily reward is ready in <white><time></white>."
+  daily-claimed: "Daily reward: <white><amount></white> and a <white><key></white> key."
+  home-bad: "<#ff6b6b>Use 1-16 letters or numbers."
+  home-limit: "<#ff6b6b>You can only keep <white><count></white> homes."
+  home-set: "Home <white><home></white> saved."
+  home-missing: "<#ff6b6b>That home doesn't exist."
+  home-deleted: "Deleted home <white><home></white>."
+  prompt-home: "What should this home be called?"
+  prompt-team: "Team name, then an optional color. Example: <white>Edge red"
+  prompt-bounty: "How many Sharps? Example: <white>2.5k"
+  prompt-price: "Name your price. Example: <white>1500"
+  team-bad-name: "<#ff6b6b>Team names are 3-16 letters or numbers."
+  team-already: "<#ff6b6b>Someone in that pair is already on a team."
+  team-taken: "<#ff6b6b>That team name is taken."
+  team-created: "Team <white><team></white> is live."
+  team-none: "<#ff6b6b>You are not on a team."
+  team-not-leader: "<#ff6b6b>Only the leader can do that."
+  team-full: "<#ff6b6b>That team is full."
+  team-no-invite: "<#ff6b6b>You don't have an invite."
+  team-invited: "Invited <white><player></white>."
+  team-invite: "<white><player></white> invited you to <white><team></white>. <white>/team join <team>"
+  team-joined: "You joined <white><team></white>."
+  team-left: "<white><player></white> left <white><team></white>."
+  team-disbanded: "Team <white><team></white> was disbanded."
+  team-kicked: "<white><player></white> was kicked."
+  team-color: "Team color set to <white><color></white>."
+  team-transfer: "Leadership passed to <white><player></white>."
+  ah-hand: "<#ff6b6b>Hold the item you want to sell."
+  ah-full: "<#ff6b6b>You already have the maximum listings."
+  ah-changed: "<#ff6b6b>The item in your hand changed."
+  ah-listed: "Listed for <white><price></white>."
+  ah-missing: "<#ff6b6b>That listing is gone."
+  ah-bought: "Bought it from <white><player></white> for <white><price></white>."
+  ah-sold: "<white><player></white> bought your listing. You received <white><price></white>."
+  ah-cancelled: "Listing returned to you."
+  ah-expired: "A listing expired and was sent to your mailbox."
+  kit-claimed: "Claimed <white><kit></white>."
+  kit-cooldown: "That kit is ready in <white><time></white>."
+  kit-once: "<#ff6b6b>You already claimed that kit."
+  kit-space: "<#ff6b6b>Make room in your inventory first."
+  kit-unknown: "<#ff6b6b>That kit doesn't exist."
+  crate-no-key: "<#ff6b6b>You need a key for that crate."
+  crate-empty: "<#ff6b6b>That crate has no rewards."
+  crate-reward: "You pulled <white><reward></white>."
+  mailbox-stored: "Your inventory was full. The rest is in <white>/menu</white> → mailbox."
+  mailbox-empty: "Your mailbox is empty."
+  mailbox-claim: "Claimed from your mailbox."
+  mailbox-waiting: "You have <white><count></white> items in your mailbox."
+  combat-blocked: "<#ff6b6b>You are in combat for <white><time>s</white>."
+  teleport-start: "Teleporting to <white><label></white> in <white><time>s</white>. Don't move."
+  teleport-cancel: "<#ff6b6b>Teleport cancelled."
+  teleported: "Teleported to <white><label></white>."
+  rtp-search: "Searching the wild..."
+  rtp-fail: "<#ff6b6b>Couldn't find a safe landing. Try again."
+  rtp-cooldown: "RTP is ready in <white><time>s</white>."
+  warp-missing: "<#ff6b6b>That warp doesn't exist."
+  warp-set: "Warp <white><warp></white> saved."
+  warp-deleted: "Warp <white><warp></white> deleted."
+  tpa-sent: "Request sent to <white><player></white>."
+  tpa-received: "<white><player></white> wants to teleport to you. <white>/tpaccept"
+  tpahere-received: "<white><player></white> wants you to teleport to them. <white>/tpaccept"
+  tpa-accepted: "Teleport request with <white><player></white> accepted."
+  tpa-denied: "<white><player></white> declined."
+  tpa-none: "<#ff6b6b>No teleport request is waiting."
+  tpa-disabled: "<white><player></white> is not accepting requests."
+  tpa-self: "<#ff6b6b>You are already here."
+  msg-closed: "<white><player></white> is not accepting messages."
+  reply-none: "<#ff6b6b>Nobody to reply to."
+  key-given: "<white><player></white> now has <white><count></white> <white><key></white> keys."
+  playtime-key: "You earned a <white>common</white> crate key."
